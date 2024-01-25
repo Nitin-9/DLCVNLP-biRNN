@@ -12,7 +12,11 @@ STAGE = "Data ingestion and prepration" ## <<< change stage name
 #logger()
 
 def main():
-    obj = DataIngestionPrepration()
+    data_ing_prep_obj = DataIngestionPrepration()
+    data_ing_prep_obj.load_data()
+    data_ing_prep_obj.shuffle_and_batch()
+    data_ing_prep_obj.encode_on_trainning_data()
+
 
 
 if __name__ == '__main__':
